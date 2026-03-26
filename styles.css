@@ -992,3 +992,7 @@ input:focus, select:focus, textarea:focus{
   .footer-cols{ grid-template-columns: 1fr; }
 }
 
+option {
+  background-color: #0f172a; 
+  color: rgba(255, 255, 255, 0.92); 
+}
