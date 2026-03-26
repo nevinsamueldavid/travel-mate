@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Mate — Destinations</title>
+    <meta name="description" content="Browse popular destinations with Travel Mate." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="destinations">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div id="site-header"></div>
+
+    <main id="main" class="page-main" tabindex="-1">
+      <section class="section page-intro">
+        <div class="container">
+          <p class="eyebrow">Destinations</p>
+          <h1>Popular places to explore</h1>
+          <p class="lead page-lead">
+            Filter by trip style, then head to Book when you’re ready to share dates and traveler details.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <h2>Popular Destinations</h2>
+            <p>Pick a vibe, then we’ll help you plan the perfect trip.</p>
+          </div>
+
+          <div class="filter-bar" role="group" aria-label="Filter destinations">
+            <button type="button" class="filter-chip is-active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filter-chip" data-filter="domestic" aria-pressed="false">Domestic</button>
+            <button type="button" class="filter-chip" data-filter="international" aria-pressed="false">International</button>
+            <button type="button" class="filter-chip" data-filter="beach" aria-pressed="false">Beach</button>
+            <button type="button" class="filter-chip" data-filter="culture" aria-pressed="false">Culture</button>
+          </div>
+          <p id="filterStatus" class="filter-status" aria-live="polite">All destinations shown.</p>
+
+          <div class="cards-grid" id="destinationGrid">
+            <article class="destination-card" data-tags="domestic beach">
+              <div class="destination-media" style="--img: linear-gradient(135deg, #1e3a8a, #334155)"></div>
+              <div class="destination-body">
+                <h3>Goa</h3>
+                <p>Beaches, nightlife, and Portuguese flavors.</p>
+                <div class="destination-meta">
+                  <span>From ₹12,999</span>
+                  <span class="dot" aria-hidden="true"></span>
+                  <span>Family-friendly</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="destination-card" data-tags="domestic culture">
+              <div class="destination-media" style="--img: linear-gradient(135deg, #0f4c81, #1e40af)"></div>
+              <div class="destination-body">
+                <h3>Jaipur</h3>
+                <p>History, forts, and royal street food.</p>
+                <div class="destination-meta">
+                  <span>From ₹9,499</span>
+                  <span class="dot" aria-hidden="true"></span>
+                  <span>Culture</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="destination-card" data-tags="domestic relax">
+              <div class="destination-media" style="--img: linear-gradient(135deg, #1d4ed8, #0f172a)"></div>
+              <div class="destination-body">
+                <h3>Kerala</h3>
+                <p>Backwaters, houseboats, and serene stays.</p>
+                <div class="destination-meta">
+                  <span>From ₹14,299</span>
+                  <span class="dot" aria-hidden="true"></span>
+                  <span>Relax</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="destination-card" data-tags="international culture">
+              <div class="destination-media" style="--img: linear-gradient(135deg, #334155, #1e3a8a)"></div>
+              <div class="destination-body">
+                <h3>Paris</h3>
+                <p>Art, cafes, and iconic landmarks.</p>
+                <div class="destination-meta">
+                  <span>From ₹55,999</span>
+                  <span class="dot" aria-hidden="true"></span>
+                  <span>Romance</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="cta-row">
+            <p class="cta-text">Want something custom?</p>
+            <a class="btn btn-primary" href="book.html">Get Trip Ideas</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <button type="button" id="backToTop" class="back-to-top" aria-label="Back to top" hidden>↑</button>
+
+    <script src="layout.js" defer></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

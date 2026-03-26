@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Mate — Book</title>
+    <meta name="description" content="Book your trip with Travel Mate." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="book">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div id="site-header"></div>
+
+    <main id="main" class="page-main" tabindex="-1">
+      <section class="section page-intro">
+        <div class="container">
+          <p class="eyebrow">Book</p>
+          <h1>Request your trip</h1>
+          <p class="lead page-lead">
+            Submit your details for a confirmation summary. No payment is collected on this demo site.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-alt">
+        <div class="container contact-grid">
+          <div class="contact-copy">
+            <h2>Book Your Trip</h2>
+            <p>
+              Share your travel details and get a confirmation summary right away.
+              No payment is collected on this demo page.
+            </p>
+            <div class="contact-details" aria-label="Contact information">
+              <div class="contact-detail">
+                <span class="contact-detail-label">Email</span>
+                <a href="mailto:hello@travelmate.example">hello@travelmate.example</a>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-detail-label">Phone</span>
+                <a href="tel:+9118000000000">+91 1800-000-0000</a>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-detail-label">Hours</span>
+                <span>Mon–Sat, 9:00–18:00 IST</span>
+              </div>
+            </div>
+            <div class="contact-bullets" aria-label="Booking benefits">
+              <div class="bullet">Instant confirmation summary</div>
+              <div class="bullet">Basic validation built-in</div>
+              <div class="bullet">Mobile friendly</div>
+            </div>
+          </div>
+
+          <div class="form-card" role="region" aria-label="Trip booking form">
+            <form id="bookingForm" novalidate>
+              <div class="form-row">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" placeholder="e.g., Sravan Reddy" autocomplete="name" required />
+                <span class="field-error" data-error-for="name"></span>
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="e.g., you@example.com" autocomplete="email" required />
+                <span class="field-error" data-error-for="email"></span>
+              </div>
+
+              <div class="form-row">
+                <label for="destination">Destination</label>
+                <select id="destination" name="destination" required>
+                  <option value="" selected disabled>Select a destination</option>
+                  <option>Goa</option>
+                  <option>Jaipur</option>
+                  <option>Kerala</option>
+                  <option>Paris</option>
+                </select>
+                <span class="field-error" data-error-for="destination"></span>
+              </div>
+
+              <div class="form-row">
+                <label for="startDate">Start date</label>
+                <input id="startDate" name="startDate" type="date" required />
+                <span class="field-error" data-error-for="startDate"></span>
+              </div>
+
+              <div class="form-row">
+                <label for="travelers">Travelers</label>
+                <input id="travelers" name="travelers" type="number" min="1" max="8" step="1" value="2" required />
+                <span class="field-error" data-error-for="travelers"></span>
+              </div>
+
+              <div class="form-row">
+                <label for="message">Trip notes (optional)</label>
+                <textarea id="message" name="message" rows="4" placeholder="Any preferences? e.g., vegetarian food, adventure, budget..." ></textarea>
+              </div>
+
+              <button class="btn btn-primary btn-block" type="submit">Request Booking</button>
+
+              <p class="form-footnote">
+                By submitting, you agree to receive a confirmation message (demo only).
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <button type="button" id="backToTop" class="back-to-top" aria-label="Back to top" hidden>↑</button>
+
+    <div id="confirmationModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modalTitle">Booking confirmed (demo)</h3>
+          <button class="modal-close" type="button" aria-label="Close confirmation" data-close-modal>×</button>
+        </div>
+        <div id="modalBody" class="modal-body"></div>
+        <div class="modal-actions">
+          <button class="btn btn-primary" type="button" data-close-modal>Done</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="layout.js" defer></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
