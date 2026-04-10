@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -43,12 +43,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
           
-          {/* Guest-accessible Book route */}
           <Route path="/book" element={<Book />} />
-          
           <Route path="/login" element={<Login />} />
           
-          {/* Protected Dashboard route - only logged-in users can access */}
           <Route 
             path="/dashboard" 
             element={
